@@ -1,4 +1,4 @@
-# Khánh Vy — Hồ sơ cá nhân
+# Khánh Vy - Hồ sơ cá nhân
 
 Trang giới thiệu Nguyễn Đặng Khánh Vy, với màu hồng pastel và đầy đủ sáu phần, 30 câu hỏi từ bài tự đánh giá và định hướng thương hiệu cá nhân.
 
@@ -34,5 +34,5 @@ GitHub Pages phục vụ nhánh `main`, thư mục gốc. Sau khi dựng lại `
 
 ## Nguồn hình ảnh và font
 
-- Ảnh thư viện: [Richard Stachmann / Unsplash](https://unsplash.com/es/fotos/una-estanteria-llena-de-muchos-libros-en-una-biblioteca-0Wp92SJp9G8).
+- Ảnh chân dung do người dùng cung cấp, lưu tại `portrait.png` và được nhúng trực tiếp vào `index.html`.
 - [Be Vietnam Pro / Google Fonts](https://fonts.google.com/specimen/Be+Vietnam+Pro), giấy phép SIL Open Font License trong `fonts/OFL.txt` và `fonts.css`.

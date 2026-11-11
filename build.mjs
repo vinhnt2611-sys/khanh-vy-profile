@@ -26,7 +26,7 @@ const descriptions = [
   'Từ sinh viên Quản trị Marketing đến mục tiêu trở thành một giảng viên có chuyên môn vững và giảng dễ hiểu.',
   'Kết nối với người học, giảng viên và người làm Marketing; cùng biến kiến thức thành điều có thể áp dụng.',
   'Kết hợp khả năng học tập, trải nghiệm truyền thông và năng lực truyền đạt thành một hướng đi rõ ràng.',
-  'Chỉn chu, đáng tin và tự nhiên — một hình ảnh nhất quán với cách mình học, làm việc và trò chuyện.',
+  'Chỉn chu, đáng tin và tự nhiên - một hình ảnh nhất quán với cách em học, làm việc và trò chuyện.',
   'Bồi đắp chuyên môn, rèn giảng dạy, tích lũy trải nghiệm và học cách đi xa mà vẫn giữ được sự cân bằng.'
 ];
 const sourceHtml = groups.map((group,i) => `<article class="source-group chapter-card${i===0?' is-active':''}" id="original-section-${i+1}" aria-labelledby="chapter-title-${i+1}"${i===0?' aria-current="step"':''}>
@@ -34,13 +34,13 @@ const sourceHtml = groups.map((group,i) => `<article class="source-group chapter
   <div class="chapter-body"><div class="chapter-body-label"><span>Nội dung chi tiết</span><span>Cuộn trong khung để đọc ↓</span></div><div class="source-questions" tabindex="0" role="region" aria-label="Các câu trả lời: ${escape(group.title)}">${group.questions.map((question,j) => `<details class="source-question" id="question-${i+1}-${j+1}"${j===0?' open':''}><summary>${escape(question.title)}</summary><div class="source-answer">${question.lines.join('\n').trim().split(/\n\s*\n/).map(p=>`<p>${escape(p.replace(/\n/g,' '))}</p>`).join('')}</div></details>`).join('')}</div></div>
 </article>`).join('\n');
 const chapterNav=groups.map((group,i)=>`<button type="button" class="chapter-pill${i===0?' is-active':''}" data-chapter="${i}" aria-controls="original-section-${i+1}"${i===0?' aria-current="step"':''}><span>${String(i+1).padStart(2,'0')}</span>${escape(group.title)}</button>`).join('');
-const image = 'data:image/jpeg;base64,' + fs.readFileSync(path.join(root,'books.jpg')).toString('base64');
+const image = 'data:image/png;base64,' + fs.readFileSync(path.join(root,'portrait.png')).toString('base64');
 const template = fs.readFileSync(path.join(root,'template.html'),'utf8');
 const fonts = fs.readFileSync(path.join(root,'fonts.css'),'utf8');
 const theme = fs.readFileSync(path.join(root,'theme.css'),'utf8');
 const chapterCss=fs.readFileSync(path.join(root,'chapters.css'),'utf8');
 const appScript=fs.readFileSync(path.join(root,'app.js'),'utf8');
-const html = template.replace('__BOOK_IMAGE__',image).replace('__SOURCE_HTML__',sourceHtml).replace('__CHAPTER_NAV__',chapterNav).replace('__FONT_FACES__',fonts).replace('__THEME_CSS__',theme+'\n'+chapterCss).replace('__APP_SCRIPT__',appScript);
+const html = template.replace('__PORTRAIT_IMAGE__',image).replace('__SOURCE_HTML__',sourceHtml).replace('__CHAPTER_NAV__',chapterNav).replace('__FONT_FACES__',fonts).replace('__THEME_CSS__',theme+'\n'+chapterCss).replace('__APP_SCRIPT__',appScript);
 if(/__[A-Z_]+__/.test(html)) throw new Error('Unresolved placeholder');
 const script=html.match(/<script>([\s\S]*?)<\/script>/)[1];
 new vm.Script(script);
