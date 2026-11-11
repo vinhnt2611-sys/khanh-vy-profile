@@ -1,0 +1,10 @@
+_design-reference/
+*.original.html
+fonts-source.css
+verify.py
+fonts/*
+!fonts/OFL.txt
+!fonts/source.txt
+.DS_Store
+Thumbs.db
+node_modules/

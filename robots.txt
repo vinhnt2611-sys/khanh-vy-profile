@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://vinhnt2611-sys.github.io/khanh-vy-profile/sitemap.xml
