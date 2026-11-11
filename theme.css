@@ -126,6 +126,7 @@ em{font-style:normal;color:var(--rose)}
 .identity-words{font:500 28px/1.4 var(--serif);margin-bottom:16px}.identity-description p{font-size:14px;line-height:1.9;color:var(--muted)}.identity-description strong{color:var(--ink);font-weight:900}
 .channels{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:22px}
 .channel{border:2px solid #edc5d7;border-radius:13px;background:var(--pink-soft);padding:12px 10px;font-size:10px;line-height:1.6;color:var(--muted)}.channel b{display:block;font-size:13px;color:var(--rose);font-weight:900;margin-bottom:4px}
+.channel-icon{display:grid;place-items:center;width:44px;height:44px;margin-bottom:12px;border:2px solid var(--ink);border-radius:14px;background:var(--pink);color:var(--rose);box-shadow:2px 2px 0 var(--ink)}.channel-icon svg{width:25px;height:25px}
 #hanh-dong{background:var(--pink-soft)}.action-head{max-width:850px;margin:0 auto 35px;text-align:center}.action-head .section-head{margin-bottom:0}.action-head .section-intro{max-width:670px}
 .action-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:26px}
 .action-item{padding:24px;border:var(--outline);border-radius:24px;background:white;box-shadow:var(--shadow)}
